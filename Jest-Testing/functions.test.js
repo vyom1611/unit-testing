@@ -39,9 +39,9 @@ test('Apple should be in fruits array', () => {
 
 
 //Promise
-// test('Title should be "delectus aut autem"', () => {
-//     expect.assertions(1);   //This statement is to verify that an assertion( promise callback like .then) is actually called
-//     return functions.fetchUser()
-//         .then(data => expect(data.title).toEqual('delectus aut autem'))     //This .then is so that the test runs after the callback to the API is made
-// })
+test('Title should be "delectus aut autem"', () => {
+    expect.assertions(1);   //This statement is to verify that an assertion( promise callback like .then) is actually called
+    return functions.fetchUser()
+        .then(data => expect(data.title).toEqual('delectus aut autem'))     //This .then is so that the test runs after the callback to the API is made
+})
 
