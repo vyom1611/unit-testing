@@ -1,4 +1,5 @@
 const functions = require('./functions');
+const axios = require('axios');
 
 test('Adds 2+2 to equal 4', () => {
     expect(functions.add(2, 2)).toBe(4);   //Checking if function returns the expected value
@@ -37,9 +38,10 @@ test('Apple should be in fruits array', () => {
 })
 
 
-//Asynchronous data
-test('Title should be "delectus aut autem"', () => {
-    expect.assertions(1);   //This statement is to verify that an assertion( promise callback like .then) is actually called
-    return functions.fetchUser()
-        .then(data => expect(data.title).toEqual('delectus aut autem'))     //This .then is so that the test runs after the callback to the API is made
-})
+//Promise
+// test('Title should be "delectus aut autem"', () => {
+//     expect.assertions(1);   //This statement is to verify that an assertion( promise callback like .then) is actually called
+//     return functions.fetchUser()
+//         .then(data => expect(data.title).toEqual('delectus aut autem'))     //This .then is so that the test runs after the callback to the API is made
+// })
+
